@@ -5,7 +5,6 @@ STRIDE=$2
 SAMPLE_NAME=$3
 
 # we assume we are already in the container
-#SAMPLE_NAME=mcc9_v29e_dl_run3b_bnb_nu_overlay_nocrtremerge
 
 INPUTLIST=/cluster/tufts/wongjiradlab/larbys/run_dlana_jobs/inputlists/${SAMPLE_NAME}.list
 UBDLANA_DIR=/cluster/tufts/wongjiradlab/twongj01/production/ubdlana/
