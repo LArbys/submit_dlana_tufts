@@ -1,8 +1,12 @@
 import os,sys
 
 #sample="mcc9_v29e_dl_run3b_bnb_nu_overlay_nocrtremerge"
-sample="mcc9_v29e_dl_run3b_bnb_intrinsic_nue_overlay_nocrtremerge"
+#sample="mcc9_v29e_dl_run3b_bnb_intrinsic_nue_overlay_nocrtremerge"
 #sample="mcc9_v40a_dl_run3b_bnb_intrinsic_nue_overlay_CV"
+#sample="mcc9_v40a_dl_run3b_bnb_overlay_CV"
+#sample="mcc9_v40a_dl_run3b_bnb_intrinsic_nue_overlay_wiremodX"
+#sample="mcc9_v29e_dl_run3_G1_extbnb"
+sample="mcc9_v28_wctagger_run3_bnb1e19"
 
 finput = open("inputlists/"+sample+".list",'r')
 linput = finput.readlines()
