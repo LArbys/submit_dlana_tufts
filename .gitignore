@@ -5,3 +5,4 @@ outputdir/*
 haddout/*
 processing_results/*
 *.log
+list*
