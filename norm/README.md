@@ -27,7 +27,7 @@ Total for RUNS1+2+3: `6.962e20` if 100% processing
 
 # RUN 1
 
-Total Processed: ` 1.544e20 / 1.683e20 = 91.7% `
+Total Processed: `1.544e20 + 1.851e+19 = 1.7291e+20 / 1.68e20 = 102.7% `
 
 ## RUN 1 C1 FIRST PASS
 
@@ -39,12 +39,25 @@ Read 54360 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run1_ssnet_C1_merg
 
 ## RUN 1 C1 MAKEUP
 
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 --file-list dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run1_C1_makeup_merged_dlana/reco1parents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run1_C1_makeup_merged_dlana.txt.running 
+Read 6321 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run1_C1_makeup_merged_dlana/reco1parents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run1_C1_makeup_merged_dlana.txt.running
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+     3469568.0     4450931.0     4461878.0     1.872e+19     1.869e+19     4119444.0     1.851e+19     1.849e+19
+```
 
 ## RUN 1 C1 EMPTY
 
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run1_C1_merged_dlreco_empty
+Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run1_C1_merged_dlreco_empty contains 2248 files
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+     1979378.0      162239.0      163840.0      1.13e+17     1.129e+17       25823.0     1.118e+17     1.116e+17
+```
+
 # RUN 2
 
-Total processed: ` 1.595e+20 / 2.674e+20 = (59.6%) `
+Total processed: ` 1.595e+20 (D2 first pass) + 2.912e+19 (D2 makeup nonzero) + 1.186e+19 (D2 makeup empty!) + 6.377e+19 (E1) = 2.6425e+20 / 2.674e+20 = (59.6%) `
 
 ## RUN 2 D1 FIRST PASS
 
@@ -57,14 +70,38 @@ Read 41803 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merg
 
 ## RUN 2 D1 MAKEUP
 
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_nonzero
+Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_nonzero contains 7553 files
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+    11938982.0     7098563.0     7111807.0     2.978e+19     2.975e+19     6391575.0     2.912e+19     2.909e+19
+```
 
-## RUN 2 D1 EMPTY
+## RUN 2 D1 MAKEUP-EMPTY
 
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_empty
+Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_empty contains 7332 files
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+    19750303.0      150410.0     3209256.0     1.241e+19     1.239e+19     2823554.0     1.186e+19     1.185e+19
+```
 
+## RUN 2 E1 FIRST PASS
 
-# RUN 3
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d data_bnb_mcc9.1_ssnet_run2_v08_00_00_29e_dl_ssnet_E1_merged_dlreco
+Definition data_bnb_mcc9.1_ssnet_run2_v08_00_00_29e_dl_ssnet_E1_merged_dlreco contains 26951 files
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+    28935539.0    19309114.0    19914275.0     6.516e+19     6.507e+19    18208461.0     6.377e+19     6.369e+19
+Warning!! BNB data for some of the requested runs/subruns is not in the database.
+9 runs missing BNB data (number of subruns missing the data): 11361 (1),11362 (2),11370 (1),11372 (3),11375 (1),11376 (1),11380 (1),11382 (1),11354 (2),
+```
 
-Total Processed: ` ( 1.482e+20 + 2.589e+19 + 1.162e+17 )/ 2.166e+20 (80.4%) `
+# RUN 3b
+
+Total Processed: ` 1.482e+20 + 2.589e+19 + 1.162e+17  = 1.742062e+20 / 2.166e+20 (80.4%) `
+
+The missing 3e19 are the files Matt talked about?
 
 ## RUN 3 G1 Open 1e19
 
