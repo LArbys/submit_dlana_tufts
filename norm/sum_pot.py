@@ -6,9 +6,10 @@ from array import array
 #sample="mcc9_v29e_dl_run3b_bnb_nu_overlay_LowE"
 #sample="mcc9_v29e_dl_run3b_bnb_nu_overlay_nocrtremerge"
 #sample="mcc9_v29e_dl_run3b_bnb_intrinsic_nue_overlay_nocrtremerge"
-#sample="mcc9_v28_wctagger_extbnb"
+sample="mcc9_v28_wctagger_extbnb"
 #sample="mcc9_v28_wctagger_bnboverlay"
-sample="mcc9_v28_wctagger_nueintrinsics"
+#sample="mcc9_v08_00_00_40a_dl_run3b_bnb_nu_overlay_LYdown"
+#sample="mcc9_v29e_dl_run3_G1_extbnb"
 
 finput = open("../inputlists/%s.list"%(sample),'r')
 linput = finput.readlines()
@@ -18,7 +19,8 @@ potsum = 0.0
 
 for l in linput:
     l = l.strip()
-    print "[",ifile,"] ",l
+    if ifile%100==0:
+        print "[",ifile,"] ",l
     rfile   = rt.TFile( l )
     try :
         pottree = rfile.Get("potsummary_generator_tree")
