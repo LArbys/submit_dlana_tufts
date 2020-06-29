@@ -144,3 +144,11 @@ Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run3_
 Warning!! BNB data for some of the requested runs/subruns is not in the database.
 4 runs missing BNB data (number of subruns missing the data): 15185 (2),15191 (4),15187 (4),15201 (7),
 ```
+## RUN 3F MAIN SAMPLE
+
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 --file-list=dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_ssnet_F1_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_ssnet_F1_merged_dlana.list
+Read 5454 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_ssnet_F1_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_ssnet_F1_merged_dlana.list
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+    14402674.0    11169605.0    11229268.0      4.29e+19       4.3e+19     9120753.0      3.92e+19     3.929e+19
+```
