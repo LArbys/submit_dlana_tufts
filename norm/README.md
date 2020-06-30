@@ -25,14 +25,22 @@ Notes on normalization:
 
 Total for RUNS1+2+3: `6.962e20` if 100% processing
 
-# Processed Samples, DATA
+# Processed Sample Summary, DATA
 
 | RUN Epoch         | POT (no cut) | Spills (no cut)   | SAM definition name |
 |:-----------------:| ------------- | ---------------- |:------------------- |
 | Run 1 C1          |  1.558e+20    |  37272955        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run1_ssnet_C1_merged_dlana    | 
 | Run 1 C1, makeup  |  1.869e+19    |  4461878         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run1_C1_makeup_merged_dlana    | 
 | Run 1 C1, empty   |  1.129e+17    |  163840          |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run1_C1_merged_dlreco_empty |
-| **Run 1 Total**   |  **1.746e+20** | **41898673**    |                     |
+| **Run 1 Available**   |  **1.746e+20** | **41898673**    |                     |
+| Run 2 D2          |  1.63e+20     |  39123798        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merged_dlana    | 
+| Run 2 D2, makeup  |  2.964e+19    |  7089070         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana    | 
+| Run 2 D2, empty   |  1.239e+19    |  3209256         |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_empty |
+| Run 2 E1          |  6.507e+19     |  19914275        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana/    | 
+| Run 2 D2, makeup  |  --    |  --         |  not made yet    | 
+| Run 2 D2, empty   |  --    |  --         |  not made yet |
+| **Run 2 Available**   |  **2.701e+20** | **69336399**    |                     |
+
 
 
 # RUN 1
@@ -69,7 +77,7 @@ Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run1_
 
 Total processed: ` 1.595e+20 (D2 first pass) + 2.912e+19 (D2 makeup nonzero) + 1.186e+19 (D2 makeup empty!) + 6.377e+19 (E1) = 2.6425e+20 / 2.674e+20 = (59.6%) `
 
-## RUN 2 D1 FIRST PASS
+## RUN 2 D2 FIRST PASS
 
 ```
 [ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 --file-list=dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merged_dlana.list 
@@ -78,8 +86,17 @@ Read 41803 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merg
     66763579.0    39047565.0    39123798.0     1.632e+20      1.63e+20    35063854.0     1.595e+20     1.593e+20
 ```
 
-## RUN 2 D1 MAKEUP
+## RUN 2 D2 MAKEUP
 
+After DLANA processing (use this for plots):
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 --file-list=dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana.list
+Read 7530 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana.list
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+    11902666.0     7075885.0     7089070.0     2.968e+19     2.964e+19     6369424.0     2.902e+19     2.899e+19
+```
+
+After dlreco-stage:
 ```
 [ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_nonzero
 Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_nonzero contains 7553 files
@@ -87,7 +104,7 @@ Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_
     11938982.0     7098563.0     7111807.0     2.978e+19     2.975e+19     6391575.0     2.912e+19     2.909e+19
 ```
 
-## RUN 2 D1 MAKEUP-EMPTY
+## RUN 2 D2 MAKEUP-EMPTY
 
 ```
 [ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_empty
