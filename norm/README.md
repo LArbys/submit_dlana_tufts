@@ -25,6 +25,16 @@ Notes on normalization:
 
 Total for RUNS1+2+3: `6.962e20` if 100% processing
 
+# Processed Samples, DATA
+
+| RUN Epoch         | POT (no cut) | Spills (no cut)   | SAM definition name |
+|:-----------------:| ------------- | ---------------- |:------------------- |
+| Run 1 C1          |  1.558e+20    |  37272955        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run1_ssnet_C1_merged_dlana    | 
+| Run 1 C1, makeup  |  1.869e+19    |  4461878         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run1_C1_makeup_merged_dlana    | 
+| Run 1 C1, empty   |  1.129e+17    |  163840          |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run1_C1_merged_dlreco_empty |
+| **Run 1 Total**   |  **1.746e+20** | **41898673**    |                     |
+
+
 # RUN 1
 
 Total Processed: `1.544e20 + 1.851e+19 = 1.7291e+20 / 1.68e20 = 102.7% `
