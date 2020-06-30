@@ -52,7 +52,21 @@ If you use them to plot, you need to recalculate the POT and Spill sums for that
 | **Run 3 Available**   |  **2.430e+20** | **62934480**    |                     |
 | **TOTAL AVAILABLE**  |  **6.877e+20** | **174169552**
 
+# DATA filtered samples
 
+## 1m1p
+
+Made with June BDT.
+
+File locations relative to MCC9 file directory: `/cluster/tufts/wongjiradlab/larbys/data/mcc9/`
+
+| RUN Epoch         | POT (no cut) | Spills (no cut)   | Final Vertex Variable Tree, Tufts location |
+|:-----------------:| ------------- | ---------------- |:------------------- |
+| Run 1 C1          |  1.746e+20    |  41898673        | mcc9_v29e_dl_run1_C1_bnb_dlfilter_1m1p/mcc9_v29e_dl_run1_C1_bnb_dlfilter_1m1p_v1_1_2b_fvv.root |
+| Run 2 D2          |  2.050e+20    |  49422124        | mcc9_v29e_dl_run2_D2_bnb_dlfilter_1m1p/mcc9_v29e_dl_run2_D2_bnb_dlfilter_1m1p_v1_1_2b_fvv.root | 
+| Run 2 E1          |  6.507e+19    |  19914275        | in preparation    |
+| Run 3 F1          |  4.3e+19      |  11229268        | mcc9_v29e_dl_run3_F1_bnb_dlfilter_1m1p/mcc9_v29e_dl_run3_F1_bnb_dlfilter_1m1p_v1_1_2b_fvv.root | 
+| Run 3 G1          |  2.000e+20    |  51705212        | mcc9_v29e_dl_run3_G1_bnb_dlfilter_1m1p/mcc9_v29e_dl_run3_G1_bnb_dlfilter_1m1p_v1_1_2b_fvv.root |
 
 
 # RUN 1
