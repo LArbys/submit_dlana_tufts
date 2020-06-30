@@ -27,6 +27,9 @@ Total for RUNS1+2+3: `6.962e20` if 100% processing
 
 # Processed Sample Summary, DATA
 
+Note that this table uses `E1DCNT` and `tor875`, which does not include the beam quality flags. 
+If you use them to plot, you need to recalculate the POT and Spill sums for that run using `E1DCNT_wcut` and `tor875_wcut`.
+
 | RUN Epoch         | POT (no cut) | Spills (no cut)   | SAM definition name |
 |:-----------------:| ------------- | ---------------- |:------------------- |
 | Run 1 C1          |  1.558e+20    |  37272955        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run1_ssnet_C1_merged_dlana    | 
@@ -36,10 +39,19 @@ Total for RUNS1+2+3: `6.962e20` if 100% processing
 | Run 2 D2          |  1.63e+20     |  39123798        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merged_dlana    | 
 | Run 2 D2, makeup  |  2.964e+19    |  7089070         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana    | 
 | Run 2 D2, empty   |  1.239e+19    |  3209256         |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_empty |
-| Run 2 E1          |  6.507e+19     |  19914275        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana/    | 
-| Run 2 D2, makeup  |  --    |  --         |  not made yet    | 
-| Run 2 D2, empty   |  --    |  --         |  not made yet |
+| Run 2 E1          |  6.507e+19     |  19914275        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana    | 
+| Run 2 E1, makeup  |  --    |  --         |  not made yet    | 
+| Run 2 E1, empty   |  --    |  --         |  not made yet |
 | **Run 2 Available**   |  **2.701e+20** | **69336399**    |                     |
+| Run 3 F1          |  4.3e+19     |     11229268     |   dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_ssnet_F1_merged_dlana   | 
+| Run 3 F1, makeup  |  --    |  --         |   Not made yet   | 
+| Run 3 F1, empty   |  --    |  --         |   Not made yet   |
+| Run 3 G1          |  1.701e+20    |  43980680        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run3_ssnet_G1_merged_dlana    | 
+| Run 3 G1, makeup  |  2.97e+19     |  7676729         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_G1_makeup_merged_dlana   | 
+| Run 3 G1, empty   |  1.524e+17    |  47803           |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run3_G1_merged_dlreco_empty |
+| **Run 3 Available**   |  **2.430e+20** | **62934480**    |                     |
+| **TOTAL AVAILABLE**  |  **6.877e+20** | **174169552**
+
 
 
 
@@ -124,11 +136,11 @@ Warning!! BNB data for some of the requested runs/subruns is not in the database
 9 runs missing BNB data (number of subruns missing the data): 11361 (1),11362 (2),11370 (1),11372 (3),11375 (1),11376 (1),11380 (1),11382 (1),11354 (2),
 ```
 
-# RUN 3b
+# RUN 3
 
-Total Processed: ` 1.482e+20 + 2.589e+19 + 1.162e+17  = 1.742062e+20 / 2.166e+20 (80.4%) `
+Total Processed G1: ` 1.482e+20 + 2.589e+19 + 1.162e+17  = 1.742062e+20 / 2.166e+20 (80.4%) `
 
-The missing 3e19 are the files Matt talked about?
+The missing 3e19 are the G1 files Matt talked about?
 
 ## RUN 3 G1 Open 1e19
 
