@@ -39,10 +39,10 @@ If you use them to plot, you need to recalculate the POT and Spill sums for that
 | Run 2 D2          |  1.63e+20     |  39123798        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_run2_ssnet_D2_merged_dlana    | 
 | Run 2 D2, makeup  |  2.964e+19    |  7089070         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_D2_makeup_merged_dlana    | 
 | Run 2 D2, empty   |  1.239e+19    |  3209256         |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_D2_merged_dlreco_empty |
-| Run 2 E1          |  6.507e+19     |  19914275        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana    | 
+| Run 2 E1          |  5.923e+19    |  18177664        |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana    | 
 | Run 2 E1, makeup  |  --    |  --         |  not made yet    | 
 | Run 2 E1, empty   |  --    |  --         |  not made yet |
-| **Run 2 Available**   |  **2.701e+20** | **69336399**    |                     |
+| **Run 2 Available**   |  **2.642e+20** | **67599788**    |                     |
 | Run 3 F1          |  4.3e+19     |     11229268     |   dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_ssnet_F1_merged_dlana   | 
 | Run 3 F1, makeup  |  --    |  --         |   Not made yet   | 
 | Run 3 F1, empty   |  --    |  --         |   Not made yet   |
@@ -140,6 +140,17 @@ Definition tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run2_
 ```
 
 ## RUN 2 E1 FIRST PASS
+
+After DLANA processing. Use this for normalizing filtered samples.
+
+```
+[ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 --file-list=dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana.list
+Read 24203 lines from dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana/reco1uniqueparents_dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run2_ssnet_E1_merged_dlana.list
+           EXT         Gate2        E1DCNT        tor860        tor875   E1DCNT_wcut   tor860_wcut   tor875_wcut
+    26995668.0    18092336.0    18177664.0     5.931e+19     5.923e+19    16642737.0     5.804e+19     5.797e+19
+```
+
+Before DLANA processing (and right after dlreco):
 
 ```
 [ tmw@uboonebuild02 workdir_xfer_prod_to_tufts ]$ python getDataInfo.py -v2 -d data_bnb_mcc9.1_ssnet_run2_v08_00_00_29e_dl_ssnet_E1_merged_dlreco
