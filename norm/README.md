@@ -50,7 +50,7 @@ If you use them to plot, you need to recalculate the POT and Spill sums for that
 | Run 3 G1, makeup  |  2.97e+19     |  7676729         |  dlana_data_bnb_dlreco_wc_ubdlana_v1_1_0_makeup_run3_G1_makeup_merged_dlana   | 
 | Run 3 G1, empty   |  1.524e+17    |  47803           |  tmw_data_bnb_mcc9.1_ssnet_v08_00_00_29e_dl_dlreco_makeup_v1_0_6_run3_G1_merged_dlreco_empty |
 | **Run 3 Available**   |  **2.430e+20** | **62934480**    |                     |
-| **TOTAL AVAILABLE**  |  **6.877e+20** | **174169552**
+| **TOTAL AVAILABLE**  |  **6.818e+20** | **172432941** |                        |
 
 # DATA filtered samples
 
