@@ -9,6 +9,8 @@ Notes on normalization:
 | mcc9_v28_wctagger_run3_bnb1e19 | 7.795e+18 POT, 1882720 spills (with beam quality cuts)  |
 | mcc9_v28_wctagger_bnboverlay (run 1) | 4.71578587829e+20 POT |
 | mcc9_v28_wctagger_nueintrinsics (run 1) | 9.80336875336e+22 |
+| mcc9_v29e_dl_run2_bnb_intrinsics_nue_overlay_finalbdt.root (run 2) | 9.2085012316e+22  |
+| mcc9_v29e_dl_run2_bnb_nu_overlay_finalbdt.root (run 2) | 4.08963968669e+20 | 
 
 # Expected POT from Good Run Tech Note
 
